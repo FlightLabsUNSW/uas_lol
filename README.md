@@ -19,6 +19,7 @@ inputs = {
     '-z': INPUT_ZIP
 }
 `
+
 `
 modes = {
     '': MODE_NORMAL,

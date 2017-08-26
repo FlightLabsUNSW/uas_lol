@@ -8,7 +8,7 @@ The weather script can be run as a standalone script (Will print responses to th
 
 Script usage is as follows:
 
-python weather.py -[mode] -[input_type] <input-1> <input-2 (if applicable)>
+`python weather.py -[mode] -[input_type] <input-1> <input-2>`
 
 `
 inputs = {
@@ -18,6 +18,8 @@ inputs = {
     '-g': INPUT_GPS,
     '-z': INPUT_ZIP
 }
+`
+`
 modes = {
     '': MODE_NORMAL,
     '-n': MODE_NORMAL,

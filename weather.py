@@ -52,7 +52,7 @@ def getWind(data):
     return (data['wind']['speed'], data['wind']['deg'])
 
 def buildUrlGPS(lat, lon):
-    url = "http://samples.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + api
+    url = "http://samples.openweathermap.org/data/2.5/weather?lat=" + str(lat) + "&lon=" + str(lon) + "&appid=" + api
     return url
 
 def buildUrlID(id):
@@ -64,7 +64,7 @@ def buildUrlName(name):
     return url
 
 def buildUrlZip(zip, countryCode):
-    url = "api.openweathermap.org/data/2.5/weather?zip=" + zip + "," + countryCode + "&appid=" + api
+    url = "api.openweathermap.org/data/2.5/weather?zip=" + str(zip) + "," + countryCode + "&appid=" + api
     return url
 
 

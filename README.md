@@ -42,3 +42,16 @@ modes = {
 - INPUT_ID: Supply the city's ID (-i 6619279)
 - INPUT_GPS: Supply GPS Lat and Lon (-g -33.867779 151.208435)
 - INPUT_ZIP: Supply the city's zip and country code (-z 94040 us)
+
+### Weather Check Parameters
+You can set the paramters for the weather check by editing the *weather_conditions.dat* file. You need to separate each parameter by a new line.
+
+Currently supported paramters:
+- **max_wind** this parameter specifies the maximum windspeed we can fly in - units in metres/sec-it takes a float input (max_wind=3.6)
+- **max_temp** this paramter specifies the maximum temprature we can fly at - units in Kelvin - it takes a float input (max_temp=305.1)
+- **weather_types** this parameter lists the appropriate weather types for flight - https://openweathermap.org/weather-conditions - it takes a list of integers delimited by commas (weather_types=800,801,802)
+
+Example file:
+`max_wind=5.0
+max_temp=305.1
+weather_types=951,952,953,954,955,800,801,802,803,804`

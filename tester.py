@@ -11,3 +11,5 @@ print json.dumps(data)
 (speed, deg) = weather.getWind(data)
 
 print speed, " ", deg
+
+weather.checkWeather(data)

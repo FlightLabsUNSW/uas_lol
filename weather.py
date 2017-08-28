@@ -4,9 +4,17 @@ import sys
 import json
 import urllib2
 
-DEBUG = False
+DEBUG = True
 
 api = "5c2448cb38c43a072bb865941bf0614c"
+
+MAX_WIND = "max_wind"
+MAX_TEMP = "max_temp"
+WEATHER_TYPES = "weather_types"
+
+max_wind = 0
+max_temp = 0
+weather_types = []
 
 MODE_NORMAL = 0
 MODE_CHECK = 1
@@ -41,10 +49,50 @@ def getWeather(url):
 
     return data
 
-def checkWeather(data):
-    print "Ok!"
+def process_param(line):
+    global max_wind, max_temp, weather_types
+    line = line.replace(" ", "")
+    s = line.split("=")
+    if(len(s) < 2): return
+    type = s[0]
+    data = s[1]
 
-    return True
+    if type == MAX_WIND:
+        max_wind = float(data)
+    elif type == MAX_TEMP:
+        max_temp = float(data)
+    elif type == WEATHER_TYPES:
+        for id in data.split(","):
+            weather_types.append(int(id))
+
+    return
+
+
+def checkWeather(data):
+    result = True
+    #Perform checks on data here, modify result accordingly
+
+
+    with open("weather_conditions.dat", "r") as f:
+        for line in f:
+            process_param(line)
+
+    if DEBUG: print "Params: max_temp =", max_temp, " max_wind =", max_wind, " types =", weather_types
+
+    temp = data["main"]["temp"]
+    wind_speed = data['wind']['speed']
+    type = data["weather"][0]["id"]
+
+    if(temp > max_temp):
+        result = False
+    elif(wind_speed > max_wind):
+        result = False
+    elif not (type in weather_types):
+        result = False
+
+
+    print result
+    return result
 
 def getWind(data):
     print data['wind']['speed'], " ", data['wind']['deg']

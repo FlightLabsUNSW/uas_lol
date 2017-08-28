@@ -52,8 +52,9 @@ Currently supported paramters:
 - **weather_types** this parameter lists the appropriate weather types for flight - https://openweathermap.org/weather-conditions - it takes a list of integers delimited by commas (weather_types=800,801,802)
 
 Example file:
-`max_wind=5.0
 
+`
+max_wind=5.0
 max_temp=305.1
-
-weather_types=951,952,953,954,955,800,801,802,803,804`
+weather_types=951,952,953,954,955,800,801,802,803,804
+`

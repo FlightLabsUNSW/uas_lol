@@ -53,5 +53,7 @@ Currently supported paramters:
 
 Example file:
 `max_wind=5.0
+
 max_temp=305.1
+
 weather_types=951,952,953,954,955,800,801,802,803,804`

@@ -75,7 +75,8 @@ def checkWeather(data):
 
     with open("weather_conditions.dat", "r") as f:
         for line in f:
-            process_param(line)
+            if line != "":
+                process_param(line)
 
     if DEBUG: print "Params: max_temp =", max_temp, " max_wind =", max_wind, " types =", weather_types
 

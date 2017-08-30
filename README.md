@@ -5,6 +5,8 @@ CREATE UAS - Repository for Land O'Lakes competition
 
 ### Prereqs
 
+**Python**: https://www.python.org/
+
 **MAVProxy/SITL**: http://ardupilot.org/dev/docs/sitl-native-on-windows.html#sitl-native-on-windows 
 
 **drone-kit**: http://python.dronekit.io/contributing/developer_setup_windows.html
@@ -14,6 +16,7 @@ In CMD run the following:
 ```
 mavproxy.py --master=/dev/ttyUSB0 --baudrate 57600 --aircraft copter 127.0.0.1:5501 --out 127.0.0.1:14550 --out 127.0.0.1:14551 --console --map
 ```
+See here for options on what to use as master: http://python.dronekit.io/guide/connecting_vehicle.html (Likely COM ports for Windows)
 
 You can connect the script/Mission Planner to any of the out addresses
 

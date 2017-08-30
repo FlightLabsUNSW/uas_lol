@@ -1,6 +1,25 @@
 # uas_lol
 CREATE UAS - Repository for Land O'Lakes competition
 
+## Windows Setup
+
+### Prereqs
+
+**MAVProxy/SITL**: http://ardupilot.org/dev/docs/sitl-native-on-windows.html#sitl-native-on-windows 
+**drone-kit**: http://python.dronekit.io/contributing/developer_setup_windows.html
+
+In CMD run the following:
+
+```
+mavproxy.py --master=/dev/ttyUSB0 --baudrate 57600 --aircraft copter 127.0.0.1:5501 --out 127.0.0.1:14550 --out 127.0.0.1:14551 --console --map
+```
+
+You can connect the script/Mission Planner to any of the out addresses
+
+In a new CMD window run:
+```
+python test_mission.py --connect 127.0.0.1:14551
+```
 
 ## Weather Usage
 

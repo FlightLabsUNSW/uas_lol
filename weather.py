@@ -102,19 +102,19 @@ def getWind(data):
     return (data['wind']['speed'], data['wind']['deg'])
 
 def buildUrlGPS(lat, lon):
-    url = "http://api.openweathermap.org/data/2.5/weather?lat=" + str(lat) + "&lon=" + str(lon) + "&appid=" + api
+    url = "https://api.openweathermap.org/data/2.5/weather?lat=" + str(lat) + "&lon=" + str(lon) + "&appid=" + api
     return url
 
 def buildUrlID(id):
-    url = "http://api.openweathermap.org/data/2.5/weather?id=" + str(id) + "&appid=" + api
+    url = "https://api.openweathermap.org/data/2.5/weather?id=" + str(id) + "&appid=" + api
     return url
 
 def buildUrlName(name):
-    url = "http://api.openweathermap.org/data/2.5/weather?q=" + name + "&appid=" + api
+    url = "https://api.openweathermap.org/data/2.5/weather?q=" + name + "&appid=" + api
     return url
 
 def buildUrlZip(zip, countryCode):
-    url = "http://api.openweathermap.org/data/2.5/weather?zip=" + str(zip) + "," + countryCode + "&appid=" + api
+    url = "https://api.openweathermap.org/data/2.5/weather?zip=" + str(zip) + "," + countryCode + "&appid=" + api
     return url
 
 
@@ -150,22 +150,22 @@ if __name__ == "__main__":
 
     if input_mode == INPUT_NONE:
         #No input, defaulting to Sydney weather
-        url = "http://api.openweathermap.org/data/2.5/weather?id=6619279&appid=" + api
+        url = "https://api.openweathermap.org/data/2.5/weather?id=6619279&appid=" + api
     elif input_mode == INPUT_NAME:
         if len(sys.argv) >= 4:
-            url = "http://api.openweathermap.org/data/2.5/weather?q=" + sys.argv[3] + "&appid=" + api
+            url = "https://api.openweathermap.org/data/2.5/weather?q=" + sys.argv[3] + "&appid=" + api
             url = buildUrlName(sys.argv[3])
         else:
             sys.exit("Incorrect usage: Input expected a city name -n Sydney (check READEME)")
     elif input_mode == INPUT_ID:
         if len(sys.argv) >= 4:
-            url = "http://api.openweathermap.org/data/2.5/weather?id=" + sys.argv[3] + "&appid=" + api
+            url = "https://api.openweathermap.org/data/2.5/weather?id=" + sys.argv[3] + "&appid=" + api
             url = buildUrlID(sys.argv[3])
         else:
             sys.exit("Incorrect usage: Input expected a city id -i 6619279 (check READEME)")
     elif input_mode == INPUT_GPS:
         if len(sys.argv) >= 5:
-            url = "http://api.openweathermap.org/data/2.5/weather?lat=" + sys.argv[3] + "&lon=" + sys.argv[4] + "&appid="+ api
+            url = "https://api.openweathermap.org/data/2.5/weather?lat=" + sys.argv[3] + "&lon=" + sys.argv[4] + "&appid="+ api
             url = buildUrlGPS(sys.argv[3], sys.argv[4])
         else:
             sys.exit("Incorrect usage: Input expected a city id -g <lat> <lon> (check READEME)")

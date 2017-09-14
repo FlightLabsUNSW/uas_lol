@@ -14,7 +14,7 @@ CREATE UAS - Repository for Land O'Lakes competition
 In CMD run the following:
 
 ```
-mavproxy.py --master=/dev/ttyUSB0 --baudrate 57600 --aircraft copter 127.0.0.1:5501 --out 127.0.0.1:14550 --out 127.0.0.1:14551 --console --map
+mavproxy.exe --master=com9 --baudrate 57600 --out=udp:127.0.0.1:14550 --out=udp:127.0.0.1:14551 --console --mav10
 ```
 See here for options on what to use as master: http://python.dronekit.io/guide/connecting_vehicle.html (Likely COM ports for Windows)
 
@@ -22,7 +22,7 @@ You can connect the script/Mission Planner to any of the out addresses
 
 In a new CMD window run:
 ```
-python test_mission.py --connect 127.0.0.1:14551
+python test_mission.py --connect udpin:127.0.0.1:14551
 ```
 
 ## Weather Usage

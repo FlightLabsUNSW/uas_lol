@@ -5,7 +5,7 @@ import time
 import weather
 import json
 import math
-from dronekit import connect, VehicleMode, LocationGlobalRelative, Command
+from dronekit import connect, VehicleMode, LocationGlobalRelative, Command, mavutil
 import wifi_module
 import slant
 
@@ -61,6 +61,10 @@ def upload_mission(aFileName):
     print(' Clear mission')
     cmds = vehicle.commands
     cmds.clear()
+    #cmd = Command(0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT,
+    #              mavutil.mavlink.MAV_CMD_MISSION_START, 0, 0, 0, 0, 0, 0, -34.364114, 149.166022, 30)
+
+    #cmds.add(cmd)
     # Add new mission to vehicle
     for command in missionlist:
         cmds.add(command)
@@ -119,7 +123,7 @@ def do_arm():
 
     print("We are armed!")
 
-
+    '''
     print("Taking off!")
     vehicle.simple_takeoff(5)  # Take off to target altitude
 
@@ -134,7 +138,7 @@ def do_arm():
             break
         time.sleep(0.25)
 
-    
+    '''
 
 safe = False
 backoff = 10
@@ -152,9 +156,11 @@ while not (safe):
         backoff = backoff * 2
 
 
-upload_mission("mission4.waypoints")
+upload_mission("mission5.waypoints")
 
 time.sleep(10)
+
+vehicle.channels.overrides['3'] = 1500
 
 vehicle.commands.next=0
 

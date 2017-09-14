@@ -17,7 +17,7 @@
     <SUITE FILE_PATH="coverage/uas_lol$simple_goto.coverage" NAME="simple_goto Coverage Results" MODIFIED="1505372410694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/simple_goto" />
     <SUITE FILE_PATH="coverage/uas$tester.coverage" NAME="tester Coverage Results" MODIFIED="1503756044600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/uas_lol$weather.coverage" NAME="weather Coverage Results" MODIFIED="1505291060928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/uas_lol$test_mission.coverage" NAME="test_mission Coverage Results" MODIFIED="1505386167375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/uas_lol$test_mission.coverage" NAME="test_mission Coverage Results" MODIFIED="1505396059572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/uas_lol$Unnamed.coverage" NAME="test_mission Coverage Results" MODIFIED="1505300012547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/uas$weather.coverage" NAME="weather Coverage Results" MODIFIED="1503754984408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -38,8 +38,8 @@
       <file leaf-file-name="test_mission.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_mission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-307">
-              <caret line="136" column="4" lean-forward="true" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
+            <state relative-caret-position="75">
+              <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="38" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
@@ -50,7 +50,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/site-packages/dronekit/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
+            <state relative-caret-position="53975">
               <caret line="2180" column="43" lean-forward="false" selection-start-line="2180" selection-start-column="43" selection-end-line="2180" selection-end-column="43" />
               <folding />
             </state>
@@ -70,7 +70,7 @@
       <file leaf-file-name="mission_import_export.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/mission_import_export/mission_import_export.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-675">
+            <state relative-caret-position="-3778">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -80,7 +80,7 @@
       <file leaf-file-name="mission_basic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/mission_basic/mission_basic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4675">
+            <state relative-caret-position="-7">
               <caret line="194" column="38" lean-forward="true" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="38" />
               <folding />
             </state>
@@ -203,12 +203,6 @@
               <item name="uas_lol" type="b2602c69:ProjectViewProjectNode" />
               <item name="uas_lol" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uas_lol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uas_lol" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="gcs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="uas_lol" type="b2602c69:ProjectViewProjectNode" />
@@ -365,14 +359,21 @@
       <option name="project" value="LOCAL" />
       <updated>1505379699382</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Load mission and auto land">
+      <created>1505386333076</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505386333076</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19135135" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19459459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -422,7 +423,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Load mission" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load mission" />
+    <MESSAGE value="Load mission and auto land" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load mission and auto land" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -762,9 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#17#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,14 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/mission_basic/mission_basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4675">
-          <caret line="194" column="38" lean-forward="true" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/gcs/microgcs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -837,26 +828,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/dronekit/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53975">
+          <caret line="2180" column="43" lean-forward="false" selection-start-line="2180" selection-start-column="43" selection-end-line="2180" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/mission_import_export/mission_import_export.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675">
+        <state relative-caret-position="-3778">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/dronekit/__init__.py">
+    <entry file="file://$PROJECT_DIR$/examples/mission_basic/mission_basic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="2180" column="43" lean-forward="false" selection-start-line="2180" selection-start-column="43" selection-end-line="2180" selection-end-column="43" />
+        <state relative-caret-position="-7">
+          <caret line="194" column="38" lean-forward="true" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_mission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
-          <caret line="136" column="4" lean-forward="true" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
+        <state relative-caret-position="75">
+          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="38" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>

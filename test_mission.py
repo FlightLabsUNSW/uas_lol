@@ -118,9 +118,10 @@ def do_arm():
         time.sleep(1)
 
     print("We are armed!")
-    '''
+
+
     print("Taking off!")
-    vehicle.simple_takeoff(10)  # Take off to target altitude
+    vehicle.simple_takeoff(5)  # Take off to target altitude
 
     # Wait until the vehicle reaches a safe height before processing the goto
     #  (otherwise the command after Vehicle.simple_takeoff will execute
@@ -128,12 +129,13 @@ def do_arm():
     while True:
         print(" Altitude: ", vehicle.location.global_relative_frame.alt)
         # Break and return from function just below target altitude.
-        if vehicle.location.global_relative_frame.alt >= 3 * 0.95:
+        if vehicle.location.global_relative_frame.alt >= 5 * 0.95:
             print("Reached target altitude")
             break
         time.sleep(0.25)
 
-    '''
+    
+
 safe = False
 backoff = 10
 
@@ -150,7 +152,7 @@ while not (safe):
         backoff = backoff * 2
 
 
-upload_mission("mission2.waypoints")
+upload_mission("mission4.waypoints")
 
 time.sleep(10)
 
@@ -174,7 +176,7 @@ vehicle.mode = VehicleMode("RTL")
 while True:
     print(" Altitude: ", vehicle.location.global_relative_frame.alt)
     # Break and return from function just below target altitude.
-    if vehicle.location.global_relative_frame.alt <= 0 + 0.50:
+    if vehicle.location.global_relative_frame.alt <= 0 + 1:
         print("Landed")
         break
     time.sleep(0.25)

@@ -25,6 +25,10 @@ In a new CMD window run:
 python test_mission.py --connect udpin:127.0.0.1:14551
 ```
 
+If you are getting timeout errors check: https://github.com/dronekit/dronekit-python/blob/754ce6223dd26179045eaa394d5df0a5f787ebb2/dronekit/__init__.py#L2216
+
+Try changing 30 --> 180
+
 ## Weather Usage
 
 The weather script can be run as a standalone script (Will print responses to the command line) or it can be imported as a module. It uses the Open Weather Map API: https://openweathermap.org/current

@@ -1,6 +1,6 @@
 import subprocess
 
 def runSlant():
-    subprocess.check_call("getLastImageFolder3p.exe")
+    subprocess.check_call("slant/getLastImageFolder3p.exe")
 
 

@@ -5,7 +5,7 @@
 © Copyright 2015-2016, 3D Robotics.
 performance_test.py: 
 
-This performance test logs the interval between messages being 
+This performance testers logs the interval between messages being
 sent by Dronekit-Python and an acknowledgment being received 
 from the autopilot. It provides a running report of the maximum, 
 minimum, and most recent interval for 30 seconds.

@@ -9,6 +9,10 @@ from dronekit import connect, VehicleMode, LocationGlobalRelative, Command, mavu
 import wifi_module
 import slant
 
+wifi_ssid = "Telstra3ADA"
+wifi_profile = "Telstra3ADA"
+zip = 2052
+mission = "missions/mission.waypoints"
 
 # Set up option parsing to get connection string
 import argparse
@@ -19,6 +23,35 @@ args = parser.parse_args()
 
 connection_string = args.connect
 sitl = None
+
+
+def load_params():
+    with open("mission_config.dat", "r") as f:
+        for line in f:
+            if line != "":
+                process_param(line)
+
+
+def process_param(line):
+    global zip, ssid, profile, mission
+    line = line.replace(" ", "")
+    s = line.split("=")
+    if(len(s) < 2): return
+    type = s[0]
+    data = s[1]
+
+    if type == "zip":
+        zip = int(data)
+    elif type == "wifi_ssid":
+        wifi_ssid = data
+    elif type == "wifi_profile":
+        wifi_profile = data
+    elif type == "mission_name":
+        mission = "missions/" + data
+
+
+load_params()
+
 
 
 # Start SITL if no connection string specified
@@ -38,21 +71,12 @@ while True:
 '''
 #time.sleep(10)
 
-@vehicle.on_message('DISARMING MOTORS')
-def listener(self, name, message):
-    print ("Disarm message callback activated!")
-    print (message)
-
-
-@vehicle.on_message('ARMING MOTORS')
-def listener(self, name, message):
-    print ("Arm message callback activated!")
-    print (message)
 
 def upload_mission(aFileName):
     """
     Upload a mission from a file.
     """
+    print(aFileName)
     # Read mission from file
     missionlist = readmission(aFileName)
 
@@ -61,10 +85,7 @@ def upload_mission(aFileName):
     print(' Clear mission')
     cmds = vehicle.commands
     cmds.clear()
-    #cmd = Command(0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT,
-    #              mavutil.mavlink.MAV_CMD_MISSION_START, 0, 0, 0, 0, 0, 0, -34.364114, 149.166022, 30)
 
-    #cmds.add(cmd)
     # Add new mission to vehicle
     for command in missionlist:
         cmds.add(command)
@@ -144,10 +165,11 @@ safe = False
 backoff = 10
 
 while not (safe):
-    url = weather.buildUrlZip(2052, "au")
+    url = weather.buildUrlZip(zip, "au")
     data = weather.getWeather(url)
     print(json.dumps(data))
     if weather.checkWeather(data):
+        vehicle.channels.overrides['7'] = 1800
         do_arm()
         safe = True
     else:
@@ -156,9 +178,9 @@ while not (safe):
         backoff = backoff * 2
 
 
-upload_mission("mission5.waypoints")
+upload_mission(mission)
 
-time.sleep(10)
+#time.sleep(10)
 
 vehicle.channels.overrides['3'] = 1500
 
@@ -187,20 +209,24 @@ while True:
         break
     time.sleep(0.25)
 
+time.sleep(5)
+
+vehicle.mode = VehicleMode("GUIDED")
+
 print(math.degrees(vehicle.attitude.yaw))
 
 connected = False
 
 while not connected:
     ssid = wifi_module.getSSID()
-    if("uniwide" in json.dumps(ssid)):
-        print("We are connected!")
-        connected = True
+    if(wifi_ssid in json.dumps(ssid)):
+        connected = wifi_module.connect(wifi_ssid, wifi_profile)
         time.sleep(5)
     else:
         print("Not connected yet...")
         time.sleep(1)
 
+print("We are connected!")
 
 slant.runSlant()
 
@@ -208,8 +234,12 @@ slant.runSlant()
 
 #time.sleep(30)
 
+
+print("Mission Complete")
+'''
 try:
     input("Press enter to continue...")
     print ("")
 except SyntaxError:
     pass
+'''

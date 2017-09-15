@@ -19,4 +19,6 @@ def getSSID():
 
     return ssids
 
-subprocess.check_call("getLastImageFolder3p.exe")
+#subprocess.check_call("getLastImageFolder3p.exe")
+
+#subprocess.check_call("netsh wlan connect ssid=Telstra3ADA name=Telstra3ADA")

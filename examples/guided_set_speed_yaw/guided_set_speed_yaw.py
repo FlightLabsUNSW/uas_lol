@@ -198,7 +198,7 @@ def get_distance_metres(aLocation1, aLocation2):
     Returns the ground distance in metres between two LocationGlobal objects.
 
     This method is an approximation, and will not be accurate over large distances and close to the 
-    earth's poles. It comes from the ArduPilot test code: 
+    earth's poles. It comes from the ArduPilot testers code:
     https://github.com/diydrones/ardupilot/blob/master/Tools/autotest/common.py
     """
     dlat = aLocation2.lat - aLocation1.lat
@@ -211,7 +211,7 @@ def get_bearing(aLocation1, aLocation2):
     Returns the bearing between the two LocationGlobal objects passed as parameters.
 
     This method is an approximation, and may not be accurate over large distances and close to the 
-    earth's poles. It comes from the ArduPilot test code: 
+    earth's poles. It comes from the ArduPilot testers code:
     https://github.com/diydrones/ardupilot/blob/master/Tools/autotest/common.py
     """	
     off_x = aLocation2.lon - aLocation1.lon

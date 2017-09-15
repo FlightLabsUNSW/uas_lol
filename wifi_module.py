@@ -18,3 +18,12 @@ def getSSID():
     print(json.dumps(ssids))
 
     return ssids
+
+def connect(ssid, profile):
+    result = subprocess.check_output("netsh wlan connect ssid=" + ssid + " name=" + profile)
+
+    if "successfully" in result:
+        return True
+    else:
+        return False
+

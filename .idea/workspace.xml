@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c9b3f1f-0503-48c2-8197-19207fa0ec6f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/getLastImageFolder.log" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/getLastImageFolder3p.exe" afterPath="$PROJECT_DIR$/slant/getLastImageFolder3p.exe" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mission.waypoints" afterPath="$PROJECT_DIR$/missions/mission.waypoints" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mission2.waypoints" afterPath="$PROJECT_DIR$/missions/mission2.waypoints" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ok" afterPath="$PROJECT_DIR$/mission_config.dat" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/output.txt" afterPath="$PROJECT_DIR$/uas_mission.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/serial_tester.py" afterPath="$PROJECT_DIR$/testers/serial_tester.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_mission.py" afterPath="$PROJECT_DIR$/testers/test_mission.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tester.py" afterPath="$PROJECT_DIR$/testers/tester.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wifi_test.py" afterPath="$PROJECT_DIR$/testers/wifi_test.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wifi_test2.py" afterPath="$PROJECT_DIR$/testers/wifi_test2.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/windows_setup.ps1" afterPath="$PROJECT_DIR$/setup/windows_setup.ps1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/flight_replay/flight_replay.py" afterPath="$PROJECT_DIR$/examples/flight_replay/flight_replay.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/guided_set_speed_yaw/guided_set_speed_yaw.py" afterPath="$PROJECT_DIR$/examples/guided_set_speed_yaw/guided_set_speed_yaw.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/mission_basic/mission_basic.py" afterPath="$PROJECT_DIR$/examples/mission_basic/mission_basic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/performance_test/performance_test.py" afterPath="$PROJECT_DIR$/examples/performance_test/performance_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/slant.py" afterPath="$PROJECT_DIR$/slant.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wifi_module.py" afterPath="$PROJECT_DIR$/wifi_module.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,14 +48,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uas_mission.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uas_mission.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uas_mission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1436">
+            <state relative-caret-position="25">
               <caret line="171" column="37" lean-forward="false" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wifi_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testers/wifi_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="174" column="20" lean-forward="false" selection-start-line="174" selection-start-column="20" selection-end-line="174" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -170,7 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,6 +176,11 @@
             </path>
             <path>
               <item name="uas_lol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uas_lol" type="462c0819:PsiDirectoryNode" />
+              <item name="testers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uas_lol" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -192,6 +188,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,20 +373,26 @@
       <option name="project" value="LOCAL" />
       <updated>1505396176340</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Better wifi control, camera trigger - missions working better. Mission config file support">
+      <created>1505490454766</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1505490454766</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20486486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20864865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34269005" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34269005" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -435,7 +438,8 @@
     <MESSAGE value="Load mission" />
     <MESSAGE value="Load mission and auto land" />
     <MESSAGE value="Throttle override for auto takeoff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Throttle override for auto takeoff" />
+    <MESSAGE value="Better wifi control, camera trigger - missions working better. Mission config file support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better wifi control, camera trigger - missions working better. Mission config file support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -731,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testers/wifi_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="174" column="20" lean-forward="false" selection-start-line="174" selection-start-column="20" selection-end-line="174" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testers/wifi_test2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -829,11 +826,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uas_mission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1436">
+        <state relative-caret-position="25">
           <caret line="171" column="37" lean-forward="false" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testers/wifi_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="174" column="20" lean-forward="false" selection-start-line="174" selection-start-column="20" selection-end-line="174" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

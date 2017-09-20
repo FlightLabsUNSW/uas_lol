@@ -27,3 +27,10 @@ def connect(ssid, profile):
     else:
         return False
 
+def disconnect(ssid, profile):
+    result = subprocess.check_output("netsh wlan disconnect ssid=" + ssid + " name=" + profile)
+
+    if "successfully" in result:
+        return True
+    else:
+        return False

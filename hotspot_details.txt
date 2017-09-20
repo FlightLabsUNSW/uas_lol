@@ -1,0 +1,4 @@
+SSID: Verizon-MiFi7730L-2E0F
+Password: f6b67c2a
+
+Admin Password: f6b67c2a

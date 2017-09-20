@@ -60,9 +60,22 @@ if not connection_string:
     sitl = dronekit_sitl.start_default()
     connection_string = sitl.connection_string()
 
+
+import pyttsx
+
+engine = pyttsx.init()
+engine.say("Hello ................................... Connecting to vehicle... please wait...")
+engine.runAndWait()
+
 # Connect to the Vehicle
 print('Connecting to vehicle on: %s' % connection_string)
 vehicle = connect(connection_string, wait_ready=True, baud=57600, heartbeat_timeout=120)
+
+import pyttsx
+
+engine = pyttsx.init()
+engine.say("Hello ................................... Vehicle Connected!")
+engine.runAndWait()
 
 '''
 while True:
@@ -131,6 +144,12 @@ def do_arm():
         print(" Waiting for vehicle to initialise...")
         time.sleep(1)
 
+    import pyttsx
+
+    engine = pyttsx.init()
+    engine.say("Hello ................................... Arming motors... please stand clear...")
+    engine.runAndWait()
+
     print("Arming motors")
     # Copter should arm in GUIDED mode
     vehicle.mode = VehicleMode("GUIDED")
@@ -143,6 +162,9 @@ def do_arm():
         time.sleep(1)
 
     print("We are armed!")
+    engine = pyttsx.init()
+    engine.say("Hello ................................... Motors Armed... preparing for takeoff...")
+    engine.runAndWait()
 
     '''
     print("Taking off!")
@@ -164,16 +186,26 @@ def do_arm():
 safe = False
 backoff = 10
 
+engine = pyttsx.init()
+engine.say("Hello ................................... Checking weather for safety... please wait...")
+engine.runAndWait()
+
 while not (safe):
     url = weather.buildUrlZip(zip, "au")
     data = weather.getWeather(url)
     print(json.dumps(data))
     if weather.checkWeather(data):
-        vehicle.channels.overrides['7'] = 1800
+        engine = pyttsx.init()
+        engine.say("Hello ................................... Weather is safe")
+        engine.runAndWait()
+        #vehicle.channels.overrides['7'] = 1800
         do_arm()
         safe = True
     else:
         print("Weather is too dangerous checking again in: {0} seconds".format(backoff))
+        engine = pyttsx.init()
+        engine.say("Hello .................................. Weather is too dangerous checking again in: {0} seconds".format(backoff))
+        engine.runAndWait()
         time.sleep(backoff)
         backoff = backoff * 2
 
@@ -188,6 +220,7 @@ vehicle.commands.next=0
 
 # Set mode to AUTO to start mission
 vehicle.mode = VehicleMode("AUTO")
+last = 0
 
 while True:
     nextwaypoint = vehicle.commands.next

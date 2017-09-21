@@ -1,4 +1,9 @@
 zip= 2052
-wifi_ssid= Telstra3ADA
-wifi_profile= Telstra3ADA
+zip_area= au
+wifi_ssid= Holiday
+wifi_profile= Holiday
+camera_ssid = 0003SL3P4664
+camera_profile = 0003SL3P4664
+image_src= C:/Users/simon/Documents/test_images
+image_dest= C:/Users/simon/Documents/testDump
 mission_name= mission10.waypoints

@@ -8,11 +8,17 @@ import math
 from dronekit import connect, VehicleMode, LocationGlobalRelative, Command, mavutil
 import wifi_module
 import slant
+import copy_control
 
 wifi_ssid = "Telstra3ADA"
 wifi_profile = "Telstra3ADA"
+camera_ssid = "0003SL3P4664"
+camera_profile = "0003SL3P4664"
 zip = 2052
+zip_area = "au"
 mission = "missions/mission.waypoints"
+image_src = ""
+image_dest = ""
 
 # Set up option parsing to get connection string
 import argparse
@@ -33,7 +39,7 @@ def load_params():
 
 
 def process_param(line):
-    global zip, ssid, profile, mission
+    global zip, ssid, profile, mission, zip_area, image_src, image_dest, camera_ssid, camera_profile
     line = line.replace(" ", "")
     s = line.split("=")
     if(len(s) < 2): return
@@ -48,6 +54,18 @@ def process_param(line):
         wifi_profile = data
     elif type == "mission_name":
         mission = "missions/" + data
+    elif type == "zip_area":
+        zip_area = data
+        #print("Zip area: ", zip_area)
+    elif type == "image_src":
+        image_src = data
+    elif type == "image_dest":
+        image_dest = data
+    elif type == "camera_ssid":
+        camera_ssid = data
+    elif type == "camera_profile":
+        camera_profile = data
+
 
 
 load_params()
@@ -229,11 +247,9 @@ while True:
         break
 
 
+#print("Returning to Launch")
+#vehicle.mode = VehicleMode("RTL")
 '''
-print("Returning to Launch")
-vehicle.mode = VehicleMode("RTL")
-'''
-
 while True:
     print(" Altitude: ", vehicle.location.global_relative_frame.alt)
     # Break and return from function just below target altitude.
@@ -241,6 +257,7 @@ while True:
         print("Landed")
         break
     time.sleep(0.25)
+'''
 
 time.sleep(5)
 
@@ -252,8 +269,8 @@ connected = False
 
 while not connected:
     ssid = wifi_module.getSSID()
-    if(wifi_ssid in json.dumps(ssid)):
-        connected = wifi_module.connect(wifi_ssid, wifi_profile)
+    if(camera_ssid in json.dumps(ssid)):
+        connected = wifi_module.connect(camera_ssid, camera_profile)
         time.sleep(5)
     else:
         print("Not connected yet...")
@@ -263,16 +280,11 @@ print("We are connected!")
 
 slant.runSlant()
 
+copy_control.copytree(image_dest, image_src)
+
 #while not False: time.sleep(0.1)
 
 #time.sleep(30)
 
 
 print("Mission Complete")
-'''
-try:
-    input("Press enter to continue...")
-    print ("")
-except SyntaxError:
-    pass
-'''

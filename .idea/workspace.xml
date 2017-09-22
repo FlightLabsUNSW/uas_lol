@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c9b3f1f-0503-48c2-8197-19207fa0ec6f" name="Default" comment="">
+    <list default="true" id="9c9b3f1f-0503-48c2-8197-19207fa0ec6f" name="Default" comment="missions">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/copy_control.py" afterPath="$PROJECT_DIR$/copy_control.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mission_config.dat" afterPath="$PROJECT_DIR$/mission_config.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testers/tester.py" afterPath="$PROJECT_DIR$/testers/tester.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uas_mission.py" afterPath="$PROJECT_DIR$/uas_mission.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather_conditions.dat" afterPath="$PROJECT_DIR$/weather_conditions.dat" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -456,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505920701631</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="missions">
+      <created>1506049040758</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506049040758</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -517,7 +519,8 @@
     <MESSAGE value="Throttle override for auto takeoff" />
     <MESSAGE value="Better wifi control, camera trigger - missions working better. Mission config file support" />
     <MESSAGE value="Text to speech" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text to speech" />
+    <MESSAGE value="missions" />
+    <option name="LAST_COMMIT_MESSAGE" value="missions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

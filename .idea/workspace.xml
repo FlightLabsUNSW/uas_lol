@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c9b3f1f-0503-48c2-8197-19207fa0ec6f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uas_mission.py" afterPath="$PROJECT_DIR$/uas_mission.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,8 +54,8 @@
       <file leaf-file-name="uas_mission.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/uas_mission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+            <state relative-caret-position="164">
+              <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -155,9 +156,9 @@
         <option value="C:/Python27/Lib/site-packages/dronekit/__init__.py" />
         <option value="$PROJECT_DIR$/testers/tester.py" />
         <option value="$PROJECT_DIR$/weather_conditions.dat" />
-        <option value="$PROJECT_DIR$/uas_mission.py" />
         <option value="$PROJECT_DIR$/copy_control.py" />
         <option value="$PROJECT_DIR$/mission_config.dat" />
+        <option value="$PROJECT_DIR$/uas_mission.py" />
       </list>
     </option>
   </component>
@@ -465,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506049684687</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="missions">
+      <created>1506049762869</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506049762869</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -925,8 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uas_mission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+        <state relative-caret-position="164">
+          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding />
         </state>
       </provider>

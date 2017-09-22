@@ -231,6 +231,7 @@ while not (safe):
 upload_mission(mission)
 
 #time.sleep(10)
+# #eee
 
 vehicle.channels.overrides['3'] = 1500
 

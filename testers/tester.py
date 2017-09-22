@@ -4,6 +4,7 @@ import weather
 import json
 
 url = weather.buildUrlID(6619279)
+url = weather.buildUrlZip(55389, "us")
 data = weather.getWeather(url)
 
 print json.dumps(data)
@@ -13,3 +14,5 @@ print json.dumps(data)
 print speed, " ", deg
 
 weather.checkWeather(data)
+
+weather.checkWeather()

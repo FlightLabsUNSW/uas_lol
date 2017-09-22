@@ -209,14 +209,14 @@ engine.say("Hello ................................... Checking weather for safet
 engine.runAndWait()
 
 while not (safe):
-    url = weather.buildUrlZip(zip, "au")
+    url = weather.buildUrlZip(zip, "us")
     data = weather.getWeather(url)
     print(json.dumps(data))
     if weather.checkWeather(data):
         engine = pyttsx.init()
         engine.say("Hello ................................... Weather is safe")
         engine.runAndWait()
-        #vehicle.channels.overrides['7'] = 1800
+        #vehicle.channels.overrides['9'] = 1800
         do_arm()
         safe = True
     else:
@@ -261,9 +261,9 @@ while True:
 
 time.sleep(5)
 
-vehicle.mode = VehicleMode("GUIDED")
+#vehicle.mode = VehicleMode("GUIDED")
 
-print(math.degrees(vehicle.attitude.yaw))
+#print(math.degrees(vehicle.attitude.yaw))
 
 connected = False
 
@@ -280,7 +280,7 @@ print("We are connected!")
 
 slant.runSlant()
 
-copy_control.copytree(image_dest, image_src)
+#copy_control.copytree(image_dest, image_src)
 
 #while not False: time.sleep(0.1)
 

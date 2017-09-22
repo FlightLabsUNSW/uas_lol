@@ -13,4 +13,4 @@ def copytree(src, dst, symlinks=False, ignore=None):
                 shutil.copy2(s, d)
 
 
-copytree("C:/Users/simon/Documents/test_images", "D:/images")
+#copytree("C:/Users/simon/Documents/test_images", "D:/images")
